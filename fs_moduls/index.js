@@ -28,6 +28,6 @@ const fs = require('fs');
 
 
 // delete file 
-// fs.unlink('data.txt', (err)=>{
-//     console.log(err)
-// })
+fs.unlink('data.txt', (err)=>{
+    console.log(err)
+})
