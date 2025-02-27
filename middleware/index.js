@@ -16,11 +16,11 @@ app.get('/getusers',getusers)
 
 
 // errorhandling middleware 
-app.get("/", (req, res, next)=>{
+app.get("*", (req, res, next)=>{
     const error = new Error("Something went wrong.")
     error.statusCode = 404;
     error.status = 'Not found',
-    next(next)
+    next(error)
 })
 
 app.use(errorHandling)
